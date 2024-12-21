@@ -1,0 +1,29 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 1.5rem;
+}
+
+.card-text {
+    color: #555;
+}
+
+.btn {
+    margin-right: 5px;
+}
