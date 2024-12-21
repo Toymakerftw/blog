@@ -12,7 +12,7 @@ function getUserById($id) {
 
 function getPostById($id) {
     global $pdo;
-    $stmt = $pdo->prepare("SELECT * FROM posts WHERE id = :id");
+    $stmt = $pdo->prepare("SELECT p.*, u.username FROM posts p JOIN users u ON p.author_id = u.id WHERE p.id = :id");
     $stmt->execute(['id' => $id]);
     return $stmt->fetch(PDO::FETCH_ASSOC);
 }

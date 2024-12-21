@@ -17,6 +17,7 @@ $posts = getPosts();
                         <p class="card-text">Likes: <?php echo getLikesCount($post['id']); ?></p>
                         <a href="post-like.php?id=<?php echo $post['id']; ?>" class="btn btn-primary">Like</a>
                         <a href="post-comment.php?id=<?php echo $post['id']; ?>" class="btn btn-secondary">Comment</a>
+                        <a href="view-comments.php?id=<?php echo $post['id']; ?>" class="btn btn-info">View Comments</a>
                         <?php if (isUserLoggedIn() && $post['author_id'] == $_SESSION['user_id']): ?>
                             <a href="edit-post.php?id=<?php echo $post['id']; ?>" class="btn btn-warning">Edit</a>
                             <a href="delete-post.php?id=<?php echo $post['id']; ?>" class="btn btn-danger">Delete</a>
